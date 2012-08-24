@@ -18,10 +18,17 @@
 @white:                 #fff;
 
 
+// Key colors
+// -------------------------
+@blue:                  #3b5998;
+@blueWhite:             #d8dfea;
+@blueHover:             #4b67a1;
+@blueLight:             #e7ebf2;
+@blueDark:              #133783;
+
+
 // Accent colors
 // -------------------------
-@blue:                  #049cdb;
-@blueDark:              #0064cd;
 @green:                 #46a546;
 @red:                   #9d261d;
 @yellow:                #ffc40d;
@@ -32,23 +39,23 @@
 
 // Scaffolding
 // -------------------------
-@bodyBackground:        @white;
+@bodyBackground:        @blueLight;
 @textColor:             @grayDark;
 
 
 // Links
 // -------------------------
-@linkColor:             #08c;
+@linkColor:             @blue;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sansFontFamily:        'lucida grande',tahoma,verdana,arial,sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
-@baseFontSize:          14px;
+@baseFontSize:          11px;
 @baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        20px;
 @altFontFamily:         @serifFontFamily;
@@ -73,7 +80,7 @@
 @btnBorder:                         #bbb;
 
 @btnPrimaryBackground:              @linkColor;
-@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
+@btnPrimaryBackgroundHighlight:     @linkColor;
 
 @btnInfoBackground:                 #5bc0de;
 @btnInfoBackgroundHighlight:        #2f96b4;
@@ -161,7 +168,7 @@
 @navbarBackgroundHighlight:       #ffffff;
 @navbarBorder:                    darken(@navbarBackground, 12%);
 
-@navbarText:                      @gray;
+@navbarText:                      @white;
 @navbarLinkColor:                 @gray;
 @navbarLinkColorHover:            @grayDark;
 @navbarLinkColorActive:           @gray;
@@ -170,24 +177,25 @@
 
 @navbarBrandColor:                @navbarLinkColor;
 
-// Inverted navbar
-@navbarInverseBackground:                #111111;
-@navbarInverseBackgroundHighlight:       #222222;
-@navbarInverseBorder:                    #252525;
 
-@navbarInverseText:                      @grayLight;
-@navbarInverseLinkColor:                 @grayLight;
+// Inverted navbar
+@navbarInverseBackground:                @blue;
+@navbarInverseBackgroundHighlight:       @blue;
+@navbarInverseBorder:                    @blueDark;
+
+@navbarInverseText:                      @blueWhite;
+@navbarInverseLinkColor:                 @blueWhite;
 @navbarInverseLinkColorHover:            @white;
 @navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
 @navbarInverseLinkBackgroundHover:       transparent;
-@navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
+@navbarInverseLinkBackgroundActive:      @blueHover;
 
 @navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
 @navbarInverseSearchBackgroundFocus:     @white;
 @navbarInverseSearchBorder:              @navbarInverseBackground;
 @navbarInverseSearchPlaceholderColor:    #ccc;
 
-@navbarInverseBrandColor:                @navbarInverseLinkColor;
+@navbarInverseBrandColor:                @white;
 
 
 // Pagination
@@ -199,7 +207,7 @@
 
 // Hero unit
 // -------------------------
-@heroUnitBackground:              @grayLighter;
+@heroUnitBackground:              @white;
 @heroUnitHeadingColor:            inherit;
 @heroUnitLeadColor:               inherit;
 
